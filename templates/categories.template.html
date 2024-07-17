@@ -1,0 +1,9 @@
+<div class="jumbotron">
+    <h3>Categories</h3>
+
+    <ul>
+        <li ng-repeat="category in categoriesCtrl.categories" ui-sref-active="active" ui-sref="items({categoryShortName: category.short_name, categoryName:category.name})" role="presentation">
+            <a href="#">{{category.name}}</a>
+        </li>
+    </ul>
+</div>

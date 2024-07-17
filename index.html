@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app='MenuApp'>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Restaurant Menu App</title>
+</head>
+<body>
+<h1>Restaurant Menu App</h1>
+<div class="container">
+    <div class="header">
+        <nav>
+            <ul class="nav nav-pills nav-left">
+                <li ui-sref-active="active" ui-sref="home" role="presentation"><a href="#">Home</a></li>
+                <li ui-sref-active="active" ui-sref="categories" role="presentation"><a href="#">Categories</a></li>
+            </ul>
+        </nav>
+    </div>
+    <ui-view></ui-view>
+</div>
+
+<!-- Libraries -->
+<script src="lib/angular.min.js"></script>
+<script src="lib/angular-ui-router.min.js"></script>
+
+<!-- Modules -->
+<script src="src/modules/menuApp.module.js"></script>
+<script src="src/modules/data.module.js"></script>
+
+<!-- Routes -->
+<script src="src/routes/routes.js"></script>
+
+<!-- 'MenuApp' module artifacts -->
+<script src="src/components/categories.component.js"></script>
+<script src="src/controllers/categories.controller.js"></script>
+<script src="src/services/menudata.service.js"></script>
+<script src="src/components/items.component.js"></script>
+<script src="src/controllers/items.controller.js"></script>
+
+</body>
+</html>
